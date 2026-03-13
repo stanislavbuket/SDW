@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'SDW'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: 'java'
+    
+    group = 'SDW'
+    version = '1.0'
+
+    layout.buildDirectory.set(rootProject.layout.buildDirectory.dir(project.name))
+
+    repositories {
+        mavenCentral()
+    }
+    
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src']
+            }
+        }
+    }
+    
+    test {
+        enabled = false
+    }
+}

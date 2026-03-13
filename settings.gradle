@@ -1,0 +1,10 @@
+rootProject.name = 'SDW'
+
+def labsDir = file('labs')
+if (labsDir.exists() && labsDir.isDirectory()) {
+    labsDir.eachDir { dir ->
+        if (!dir.name.startsWith('.') && dir.name != 'build') {
+            include "labs:${dir.name}"
+        }
+    }
+}
