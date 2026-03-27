@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Done by Stanislav Buket");
+
         int rows = 2;
         int cols = 3;
         int[][] A = new int[rows][cols];
