@@ -17,13 +17,16 @@ public class Main {
             String s = Integer.toString(number);
             int sum = 0;
             for (char c : s.toCharArray()) sum += Character.getNumericValue(c);
-            if (sum < 10) System.out.println("Number: " + s + " (Sum: " + sum + ")");
+            if (sum < 10) {
+                System.out.println("Number: " + s + " (Sum: " + sum + ")");
+            }
         }
     }
 
     private static void runTask2() {
         System.out.println("\n--- Task 2 ---");
-        String text = "The park is spectacular. A grape is a purple fruit. The cap is on the map. Papa bought a plane.";
+        String text = "The park is spectacular. A grape is a purple fruit. " +
+        "The cap is on the map. Papa bought a plane.";
         char target = 'p';
         char replaceFrom = 'a';
         char replaceTo = 'o';
@@ -38,10 +41,11 @@ public class Main {
             char current = text.charAt(i);
             sb.append(current);
 
-            if (Character.toLowerCase(current) == target && i + 1 < text.length()) {
+            if (Character.toLowerCase(current) == target && i+1 < text.length()) {
                 char next = text.charAt(i + 1);
                 if (Character.toLowerCase(next) == replaceFrom) {
-                    char replacement = Character.isUpperCase(next) ? Character.toUpperCase(replaceTo) : replaceTo;
+                    char replacement = Character.isUpperCase(next) ?
+                    Character.toUpperCase(replaceTo) : replaceTo;
                     sb.append(replacement);
                     i++;
                 }
