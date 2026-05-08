@@ -23,18 +23,14 @@ public class Main {
 
         System.out.println("\nMatrix A:");
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                System.out.printf("%4d", A[i][j]);
-            }
+            for (int j = 0; j < cols; j++) System.out.printf("%4d", A[i][j]);
             System.out.println();
         }
 
         System.out.println("\nSums of matrix elements by rows:");
         for (int i = 0; i < rows; i++) {
             int rowSum = 0;
-            for (int j = 0; j < cols; j++) {
-                rowSum += A[i][j];
-            }
+            for (int j = 0; j < cols; j++) rowSum += A[i][j];
             System.out.println("Row " + (i + 1) + ": " + rowSum);
         }
 

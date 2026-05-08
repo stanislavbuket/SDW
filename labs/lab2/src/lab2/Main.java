@@ -16,12 +16,8 @@ public class Main {
             int number = 1000 + random.nextInt(9000);
             String s = Integer.toString(number);
             int sum = 0;
-            for (char c : s.toCharArray()) {
-                sum += Character.getNumericValue(c);
-            }
-            if (sum < 10) {
-                System.out.println("Number: " + s + " (Sum: " + sum + ")");
-            }
+            for (char c : s.toCharArray()) sum += Character.getNumericValue(c);
+            if (sum < 10) System.out.println("Number: " + s + " (Sum: " + sum + ")");
         }
     }
 
